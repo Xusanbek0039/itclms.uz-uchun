@@ -33,7 +33,7 @@ export function AboutSection() {
 
   const stats = [
     { icon: BookOpen, value: '2M+', label: 'Lessons Completed' },
-    { icon: Users, value: '150K+', label: 'Active Learners' },
+    { icon: Users, value: '20K+', label: 'Kurslardan foydalanuvchilar' },
     { icon: Trophy, value: '50K+', label: 'Certificates Issued' },
     { icon: Globe, value: '190+', label: 'Countries Reached' }
   ];
