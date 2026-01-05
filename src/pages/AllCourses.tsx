@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import { Code, Palette, BarChart, Camera, Cpu, Globe, Star, Clock, Users, Filter, BookOpen, ArrowLeft } from 'lucide-react';
+import { 
+  Code, Palette, BarChart, Camera, Cpu, Globe, Star, 
+  Clock, Users, Filter, BookOpen, ArrowLeft, Search, GraduationCap 
+} from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -8,151 +11,100 @@ import { AnimatedSection } from '@/components/AnimatedSection';
 import { Link } from 'react-router-dom';
 
 export default function AllCourses() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Barchasi');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Development', 'Design', 'Business', 'Photography', 'AI/ML', 'Marketing', 'Data Science'];
+  const categories = ['Barchasi', 'Dasturlash', 'Dizayn', 'Biznes', 'Fotografiya', 'AI/ML', 'Marketing', 'Ma’lumotlar ilmi'];
 
   const allCourses = [
     {
       id: 1,
-      title: 'Full Stack Web Development',
-      category: 'Development',
-      instructor: 'John Smith',
+      title: 'Full Stack Web Dasturlash (MERN)',
+      category: 'Dasturlash',
+      instructor: 'Anvar Narzullaev',
       rating: 4.9,
-      students: 15420,
-      duration: '45 hours',
-      price: 129,
-      originalPrice: 199,
-      image: '🚀',
-      level: 'Beginner',
+      students: 12400,
+      duration: '60 soat',
+      price: 1200000,
+      originalPrice: 2000000,
+      level: 'Boshlang‘ich',
       icon: Code,
-      features: ['React & Node.js', 'Real Projects', 'Job Guarantee']
+      features: ['React & Node.js', 'Amaliy Loyihalar', 'Sertifikat']
     },
     {
       id: 2,
-      title: 'UI/UX Design Masterclass',
-      category: 'Design',
-      instructor: 'Sarah Johnson',
+      title: 'UI/UX Dizayn Masterklass',
+      category: 'Dizayn',
+      instructor: 'Azamat Shamuzafarov',
       rating: 4.8,
-      students: 12350,
-      duration: '32 hours',
-      price: 99,
-      originalPrice: 149,
-      image: '🎨',
-      level: 'Intermediate',
+      students: 8500,
+      duration: '40 soat',
+      price: 850000,
+      originalPrice: 1200000,
+      level: 'O‘rta',
       icon: Palette,
-      features: ['Figma & Adobe XD', 'Portfolio Projects', 'Design System']
+      features: ['Figma & Adobe XD', 'Portfolio yaratish', 'Design System']
     },
     {
       id: 3,
-      title: 'Data Science & Analytics',
-      category: 'Data Science',
-      instructor: 'Mike Chen',
+      title: 'Data Science va Sun’iy Intellekt',
+      category: 'AI/ML',
+      instructor: 'Mohirdev Guru',
       rating: 4.9,
-      students: 8940,
-      duration: '38 hours',
-      price: 149,
-      originalPrice: 219,
-      image: '📊',
-      level: 'Advanced',
-      icon: BarChart,
-      features: ['Python & R', 'Machine Learning', 'Real Datasets']
+      students: 5200,
+      duration: '72 soat',
+      price: 1500000,
+      originalPrice: 2500000,
+      level: 'Murakkab',
+      icon: Cpu,
+      features: ['Python & PyTorch', 'Machine Learning', 'Katta ma’lumotlar']
     },
     {
       id: 4,
-      title: 'Digital Photography Pro',
-      category: 'Photography',
-      instructor: 'Lisa Williams',
+      title: 'Raqamli Marketing va SMM',
+      category: 'Marketing',
+      instructor: 'Temur Adhamov',
       rating: 4.7,
-      students: 6780,
-      duration: '25 hours',
-      price: 79,
-      originalPrice: 119,
-      image: '📸',
-      level: 'Beginner',
-      icon: Camera,
-      features: ['Professional Techniques', 'Photo Editing', 'Portfolio Building']
+      students: 9300,
+      duration: '30 soat',
+      price: 600000,
+      originalPrice: 900000,
+      level: 'Boshlang‘ich',
+      icon: Globe,
+      features: ['Targeting', 'SEO strategiyasi', 'Brending']
     },
     {
       id: 5,
-      title: 'AI & Machine Learning',
-      category: 'AI/ML',
-      instructor: 'Dr. Alex Kumar',
-      rating: 4.9,
-      students: 11230,
-      duration: '52 hours',
-      price: 199,
-      originalPrice: 299,
-      image: '🤖',
-      level: 'Advanced',
-      icon: Cpu,
-      features: ['Deep Learning', 'TensorFlow & PyTorch', 'Industry Projects']
+      title: 'Biznes Analitika va Excel',
+      category: 'Biznes',
+      instructor: 'Akmal Paiziev',
+      rating: 4.6,
+      students: 4100,
+      duration: '25 soat',
+      price: 500000,
+      originalPrice: 800000,
+      level: 'Boshlang‘ich',
+      icon: BarChart,
+      features: ['Moliyaviy modellashtirish', 'Dashboardlar', 'Excel Pro']
     },
     {
       id: 6,
-      title: 'Digital Marketing Strategy',
-      category: 'Marketing',
-      instructor: 'Emma Davis',
+      title: 'Professional Fotografiya sirlari',
+      category: 'Fotografiya',
+      instructor: 'Rustam Sharipov',
       rating: 4.8,
-      students: 9560,
-      duration: '28 hours',
-      price: 89,
-      originalPrice: 139,
-      image: '🌐',
-      level: 'Intermediate',
-      icon: Globe,
-      features: ['SEO & SEM', 'Social Media', 'Analytics & ROI']
-    },
-    {
-      id: 7,
-      title: 'React Native Mobile Development',
-      category: 'Development',
-      instructor: 'James Wilson',
-      rating: 4.8,
-      students: 7200,
-      duration: '40 hours',
-      price: 159,
-      originalPrice: 229,
-      image: '📱',
-      level: 'Intermediate',
-      icon: Code,
-      features: ['iOS & Android', 'Native Performance', 'App Store Publishing']
-    },
-    {
-      id: 8,
-      title: 'Advanced Photoshop Techniques',
-      category: 'Design',
-      instructor: 'Maria Garcia',
-      rating: 4.7,
-      students: 5400,
-      duration: '30 hours',
-      price: 69,
-      originalPrice: 99,
-      image: '🖼️',
-      level: 'Intermediate',
-      icon: Palette,
-      features: ['Photo Manipulation', 'Digital Art', 'Advanced Filters']
-    },
-    {
-      id: 9,
-      title: 'Business Analytics with Excel',
-      category: 'Business',
-      instructor: 'Robert Brown',
-      rating: 4.6,
-      students: 4800,
-      duration: '22 hours',
-      price: 59,
-      originalPrice: 89,
-      image: '📈',
-      level: 'Beginner',
-      icon: BarChart,
-      features: ['Data Visualization', 'Pivot Tables', 'Financial Modeling']
+      students: 3200,
+      duration: '35 soat',
+      price: 750000,
+      originalPrice: 1100000,
+      level: 'O‘rta',
+      icon: Camera,
+      features: ['Kompozitsiya', 'Lightroom/PS', 'Studiya ishi']
     }
   ];
 
   const filteredCourses = allCourses.filter(course => {
-    const categoryMatch = selectedCategory === 'All' || course.category === selectedCategory;
+    const categoryMatch = selectedCategory === 'Barchasi' || course.category === selectedCategory;
     const searchMatch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                        course.instructor.toLowerCase().includes(searchQuery.toLowerCase());
     return categoryMatch && searchMatch;
@@ -160,147 +112,131 @@ export default function AllCourses() {
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'Beginner':
-        return 'bg-accent/10 text-accent border-accent/20';
-      case 'Intermediate':
-        return 'bg-warning/10 text-warning border-warning/20';
-      case 'Advanced':
-        return 'bg-destructive/10 text-destructive border-destructive/20';
-      default:
-        return 'bg-primary/10 text-primary border-primary/20';
+      case 'Boshlang‘ich': return 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20';
+      case 'O‘rta': return 'bg-amber-500/10 text-amber-500 border-amber-500/20';
+      case 'Murakkab': return 'bg-rose-500/10 text-rose-500 border-rose-500/20';
+      default: return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-primary/5">
-      {/* Header */}
-      <div className="bg-background/80 backdrop-blur-sm border-b sticky top-0 z-40">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+    <div className="min-h-screen bg-[#050505] text-slate-200">
+      {/* Glassmorphism Header */}
+      <div className="bg-black/40 backdrop-blur-xl border-b border-white/10 sticky top-0 z-40">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <Link to="/">
-                <Button variant="ghost" size="sm" className="gap-2">
-                  <ArrowLeft className="w-4 h-4" />
-                  Back to Home
+                <Button variant="outline" size="sm" className="rounded-full border-white/10 hover:bg-white/5">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Bosh sahifa
                 </Button>
               </Link>
-              <h1 className="text-2xl font-bold">All Courses</h1>
+              <h1 className="text-3xl font-black bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent italic">
+                AI HERITAGE KURSLARI
+              </h1>
             </div>
-            <Badge variant="secondary" className="px-4 py-2">
-              {filteredCourses.length} courses found
+            <Badge variant="outline" className="px-6 py-2 border-primary/30 bg-primary/5 text-primary-foreground text-sm rounded-full">
+              {filteredCourses.length} ta kurs topildi
             </Badge>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-12">
         {/* Search and Filters */}
         <AnimatedSection animation="fade-in-up">
-          <div className="mb-8 space-y-6">
-            <div className="max-w-md">
+          <div className="mb-12 space-y-8">
+            <div className="relative max-w-2xl mx-auto">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <Input
                 type="text"
-                placeholder="Search courses or instructors..."
+                placeholder="Kurs nomi yoki instruktor bo'yicha qidirish..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full"
+                className="w-full pl-12 h-14 bg-white/5 border-white/10 rounded-2xl focus:ring-2 focus:ring-blue-500 transition-all text-lg"
               />
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Filter className="w-4 h-4" />
-                Filter by category:
-              </div>
+            <div className="flex flex-wrap justify-center gap-3">
               {categories.map((category) => (
-                <Button
+                <button
                   key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className={`transition-all duration-300 ${
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
                     selectedCategory === category 
-                      ? 'bg-gradient-primary text-white shadow-glow' 
-                      : 'hover:border-primary hover:text-primary'
+                      ? 'bg-blue-600 border-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]' 
+                      : 'bg-white/5 border-white/10 hover:border-blue-400/50 text-slate-400'
                   }`}
                 >
                   {category}
-                </Button>
+                </button>
               ))}
             </div>
           </div>
         </AnimatedSection>
 
         {/* Courses Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredCourses.map((course, index) => (
-            <AnimatedSection 
-              key={course.id} 
-              animation="fade-in-up" 
-              delay={index * 50}
-            >
-              <Card className="hover-card h-full group overflow-hidden border-0 bg-card/50 backdrop-blur-sm">
-                <CardHeader className="relative">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl">{course.image}</div>
-                    <Badge className={getLevelColor(course.level)}>
+            <AnimatedSection key={course.id} animation="fade-in-up" delay={index * 100}>
+              <Card className="group relative h-full bg-gradient-to-b from-white/10 to-white/5 border-white/10 overflow-hidden hover:border-blue-500/50 transition-all duration-500">
+                <CardHeader className="relative pb-0">
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="p-4 rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                      <course.icon className="w-8 h-8 text-blue-400" />
+                    </div>
+                    <Badge className={`${getLevelColor(course.level)} border uppercase text-[10px] tracking-widest`}>
                       {course.level}
                     </Badge>
                   </div>
                   
-                  <div className="flex items-center gap-2 mb-2">
-                    <course.icon className="w-4 h-4 text-primary" />
-                    <span className="text-xs text-muted-foreground">{course.category}</span>
-                  </div>
-                  
-                  <h3 className="text-lg font-bold group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-xl font-bold leading-tight group-hover:text-blue-400 transition-colors min-h-[56px]">
                     {course.title}
                   </h3>
                   
-                  <p className="text-sm text-muted-foreground">by {course.instructor}</p>
+                  <div className="flex items-center gap-2 mt-2 text-slate-400">
+                    <GraduationCap className="w-4 h-4" />
+                    <span className="text-sm font-medium">{course.instructor}</span>
+                  </div>
                 </CardHeader>
 
-                <CardContent className="space-y-3">
-                  <div className="flex items-center justify-between text-xs">
+                <CardContent className="mt-6 space-y-4">
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-black/20 text-xs">
                     <div className="flex items-center gap-1">
-                      <Star className="w-3 h-3 fill-warning text-warning" />
-                      <span className="font-medium">{course.rating}</span>
+                      <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                      <span className="font-bold">{course.rating}</span>
                     </div>
-                    <div className="flex items-center gap-1 text-muted-foreground">
-                      <Users className="w-3 h-3" />
+                    <div className="flex items-center gap-1">
+                      <Users className="w-3 h-3 text-blue-400" />
                       <span>{course.students.toLocaleString()}</span>
                     </div>
-                    <div className="flex items-center gap-1 text-muted-foreground">
+                    <div className="flex items-center gap-1 text-slate-400">
                       <Clock className="w-3 h-3" />
                       <span>{course.duration}</span>
                     </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <div className="text-xs text-muted-foreground">Includes:</div>
-                    <div className="flex flex-wrap gap-1">
-                      {course.features.slice(0, 2).map((feature, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs px-2 py-0">
-                          {feature}
-                        </Badge>
-                      ))}
-                      {course.features.length > 2 && (
-                        <span className="text-xs text-muted-foreground">+{course.features.length - 2} more</span>
-                      )}
-                    </div>
+                  <div className="flex flex-wrap gap-2">
+                    {course.features.map((feature, idx) => (
+                      <span key={idx} className="text-[10px] px-2 py-1 rounded bg-white/5 border border-white/10 text-slate-300 italic">
+                        #{feature}
+                      </span>
+                    ))}
                   </div>
                 </CardContent>
 
-                <CardFooter className="flex items-center justify-between pt-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl font-bold text-primary">${course.price}</span>
-                    <span className="text-sm text-muted-foreground line-through">${course.originalPrice}</span>
+                <CardFooter className="flex flex-col gap-4 border-t border-white/5 mt-auto pt-6 bg-white/5">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-blue-400">
+                      {course.price.toLocaleString()} söm
+                    </span>
+                    <span className="text-sm text-slate-500 line-through">
+                      {course.originalPrice.toLocaleString()}
+                    </span>
                   </div>
-                  <Button 
-                    size="sm"
-                    className="bg-gradient-primary hover:scale-105 transition-all duration-300 shadow-soft"
-                  >
-                    Enroll
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl h-12 font-bold shadow-lg shadow-blue-900/20 transition-transform active:scale-95">
+                    Kursga yozilish
                   </Button>
                 </CardFooter>
               </Card>
@@ -308,14 +244,13 @@ export default function AllCourses() {
           ))}
         </div>
 
+        {/* Not Found */}
         {filteredCourses.length === 0 && (
-          <AnimatedSection animation="fade-in-up">
-            <div className="text-center py-12">
-              <BookOpen className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">No courses found</h3>
-              <p className="text-muted-foreground">Try adjusting your search or filter criteria</p>
-            </div>
-          </AnimatedSection>
+          <div className="text-center py-20 bg-white/5 rounded-3xl border border-dashed border-white/10">
+            <BookOpen className="w-16 h-16 text-slate-600 mx-auto mb-6" />
+            <h3 className="text-2xl font-bold mb-2">Hech narsa topilmadi</h3>
+            <p className="text-slate-400 text-lg">Boshqa kalit so'z bilan qidirib ko'ring</p>
+          </div>
         )}
       </div>
     </div>

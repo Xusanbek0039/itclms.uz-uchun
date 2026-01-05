@@ -1,4 +1,4 @@
-import { Target, Globe, Heart, Users, BookOpen, Trophy } from 'lucide-react';
+import { Target, Globe, Heart, Users, BookOpen, Trophy, Youtube, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedSection } from './AnimatedSection';
@@ -6,36 +6,36 @@ import { AnimatedSection } from './AnimatedSection';
 export function AboutSection() {
   const values = [
     {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We strive for the highest quality in every course and learning experience.',
+      icon: Trophy,
+      title: '5 Yillik Tajriba',
+      description: "IT Creative Academy 5 yildan buyon O'zbekistonda sifatli IT ta'limini rivojlantirib kelmoqda.",
       color: 'text-primary'
     },
     {
-      icon: Globe,
-      title: 'Inclusivity',
-      description: 'Education should be accessible to everyone, everywhere, regardless of background.',
-      color: 'text-accent'
+      icon: Youtube,
+      title: 'YouTube Hamjamiyati',
+      description: "Husan Suyunov va IT Creative kanallari orqali minglab bepul darslar va bilimlar ulashamiz.",
+      color: 'text-red-500' // YouTube rangi
     },
     {
-      icon: Heart,
-      title: 'Passion',
-      description: 'We believe in the transformative power of passionate learning and teaching.',
+      icon: Award,
+      title: 'Sifatli Ta\'lim',
+      description: "Biz shunchaki o'rgatmaymiz, biz bozor talabiga mos yuqori malakali kadrlar tayyorlaymiz.",
       color: 'text-warning'
     },
     {
       icon: Users,
-      title: 'Community',
-      description: 'Building connections and fostering collaboration among learners worldwide.',
+      title: 'Katta Hamjamiyat',
+      description: "O'quvchilarimiz va kuzatuvchilarimizdan iborat kuchli IT hamjamiyatini shakllantirdik.",
       color: 'text-primary'
     }
   ];
 
   const stats = [
-    { icon: BookOpen, value: '2M+', label: 'Lessons Completed' },
-    { icon: Users, value: '20K+', label: 'Kurslardan foydalanuvchilar' },
-    { icon: Trophy, value: '50K+', label: 'Certificates Issued' },
-    { icon: Globe, value: '190+', label: 'Countries Reached' }
+    { icon: BookOpen, value: '500+', label: 'Video Darsliklar' },
+    { icon: Users, value: '100K+', label: 'Obunachilar' },
+    { icon: Trophy, value: '5 Yil', label: 'Bozorda' },
+    { icon: Globe, value: '10K+', label: 'Muvaffaqiyatli Bitiruvchilar' }
   ];
 
   return (
@@ -44,16 +44,14 @@ export function AboutSection() {
         <AnimatedSection animation="fade-in-up">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4 px-4 py-2 bg-primary/10 text-primary border-primary/20">
-              About EduPlatform
+              IT Creative Academy haqida
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Empowering Minds,
-              <span className="gradient-text"> Transforming Lives</span>
+              5 Yillik Tajriba va
+              <span className="gradient-text"> Zamonaviy Bilimlar</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Since 2020, we've been on a mission to democratize education and make world-class learning 
-              accessible to everyone. Our platform combines cutting-edge technology with proven pedagogical 
-              methods to create an unparalleled learning experience.
+              2020-yildan buyon Husan Suyunov asos solgan IT Creative Academy minglab yoshlarga zamonaviy kasblarni egallashda yordam berib kelmoqda. Bizning maqsadimiz — sifatli IT ta'limini har bir inson uchun ochiq va tushunarli qilishdir.
             </p>
           </div>
         </AnimatedSection>
@@ -61,15 +59,13 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <AnimatedSection animation="fade-in-right" delay={200}>
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Our Mission</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">Bizning Missiyamiz</h3>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                We believe that education is the most powerful tool for personal and societal transformation. 
-                Our platform brings together world-class instructors, innovative learning methodologies, 
-                and cutting-edge technology to create learning experiences that are both engaging and effective.
+                Biz nafaqat kurslar tashkil etamiz, balki O'zbekiston IT ekotizimini rivojlantirishga hissa qo'shamiz. 
+                Husan Suyunov boshchiligidagi jamoamiz YouTube orqali o'zbek tilidagi bepul va professional darslarni taqdim etishda kashfiyotchilardan hisoblanadi.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Whether you're looking to advance your career, explore a new passion, or gain skills for 
-                the future economy, we're here to support your learning journey every step of the way.
+                IT Creative va Husan Suyunov YouTube kanallarimiz orqali dasturlash, dizayn va texnologiyalar olamidagi eng so'nggi bilimlar muntazam ulashib boriladi.
               </p>
               
               <div className="grid grid-cols-2 gap-6">
