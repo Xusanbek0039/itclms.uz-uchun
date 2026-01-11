@@ -59,6 +59,23 @@ npm run dev
 
 Buyruqni kiritgandan so'ng, brauzeringizda `http://localhost:8080` (yoki terminalda ko'rsatilgan manzil) orqali loyihani ochishingiz mumkin.
 
+### 4. Loyihani qurish (Production)
+
+```bash
+bun run build
+```
+
+## 📂 Loyiha Tuzilishi
+
+Loyiha modulli va kengaytiriladigan arxitekturaga asoslangan:
+
+- `src/components`: Qayta ishlatiladigan UI komponentlar (Shadcn va maxsus).
+- `src/pages`: Ilovaning asosiy sahifalari va yo'nalishlari.
+- `src/hooks`: Maxsus React hooklari.
+- `src/services`: API bilan ishlash va ma'lumotlarni boshqarish.
+- `src/lib`: Konfiguratsiya va yordamchi kutubxonalar.
+- `src/types`: TypeScript interfeyslari va turlari.
+
 ## 📜 Buyruqlar (Scripts)
 
 `package.json` faylida quyidagi buyruqlar mavjud:
