@@ -1,53 +1,72 @@
 # ITCLMS Platform
 
-Ushbu loyiha **ITCLMS** (IT Courses Learning Management System) uchun ishlab chiqilgan zamonaviy ta'lim platformasidir. Loyiha React, TypeScript va Vite yordamida qurilgan bo'lib, foydalanuvchilar uchun qulay va chiroyli interfeysni taqdim etadi.
+![ITCLMS Banner](https://img.shields.io/badge/ITCLMS-Platform-blue?style=for-the-badge&logo=react)
 
-## 🚀 Xususiyatlari
+**ITCLMS** (IT Courses Learning Management System) — bu zamonaviy ta'lim jarayonlarini boshqarish va avtomatlashtirish uchun mo'ljallangan ilg'or dasturiy yechimdir. Ushbu platforma **[IT Park Zomin tuman filiali](https://it-park.uz)** buyurtmasi asosida maxsus ishlab chiqilgan bo'lib, o'quv markazlari va ta'lim muassasalari uchun mukammal boshqaruv tizimini taqdim etadi.
 
-- **Zamonaviy UI**: Shadcn UI va Tailwind CSS yordamida yaratilgan chiroyli dizayn.
-- **Mavzular**: Tizim "Qorong'i" (Dark) va "Yorug'" (Light) rejimlarni qo'llab-quvvatlaydi.
-- **Kurslar Katalogi**: Barcha kurslarni ko'rish va qidirish imkoniyati.
-- **Moslashuvchanlik**: Mobil va desktop qurilmalarga to'liq moslashgan (Responsive).
-- **Animatsiyalar**: Sahifalarda qor yog'ishi (Snow effect) va boshqa qiziqarli animatsiyalar mavjud.
+## 🌐 Loyiha Haqida
 
-## 🛠 Texnologiyalar
+Ushbu tizim talabalar va o'qituvchilar o'rtasidagi o'zaro aloqani raqamlashtirish, kurslarni samarali boshqarish va o'quv jarayonini shaffofligini ta'minlash maqsadida yaratilgan. Loyiha **[itclms.uz](https://itclms.uz)** domeni ostida faoliyat yuritishi rejalashtirilgan.
 
-Loyiha quyidagi asosiy texnologiyalardan foydalanadi:
+### ✍️ Muallif va Yaratuvchi
 
-- **[React](https://react.dev/)** - Foydalanuvchi interfeysi uchun kutubxona.
-- **[TypeScript](https://www.typescriptlang.org/)** - Xavfsiz va tushunarli kod yozish uchun.
-- **[Vite](https://vitejs.dev/)** - Tezkor loyihani ishga tushirish va qurish vositasi.
-- **[Tailwind CSS](https://tailwindcss.com/)** - UI stilizatsiyasi uchun.
-- **[Shadcn UI](https://ui.shadcn.com/)** - Tayyor va moslashuvchan komponentlar to'plami.
-- **[React Query](https://tanstack.com/query/latest)** - Ma'lumotlarni boshqarish va keshlash uchun.
-- **[React Router](https://reactrouter.com/)** - Sahifalararo navigatsiya uchun.
+Loyiha arxitekturasi va dasturiy ta'minoti **Husan Suyunov** tomonidan to'liq ishlab chiqilgan.
 
-## 📦 O'rnatish va Ishga tushirish
+- **Muallif:** Husan Suyunov
+- **Portfolio:** [husanbek-coder.uz](https://husanbek-coder.uz)
+- **Tashkilot:** IT Park Zomin tuman filiali
 
-Loyihani kompyuteringizga o'rnatish uchun quyidagi qadamlarni bajaring:
+---
 
-### 1. Loyihani yuklab olish
+## 🚀 Asosiy Imkoniyatlar
+
+Platforma quyidagi ilg'or funksionalliklarni o'z ichiga oladi:
+
+- **Intellektual Boshqaruv Paneli (Dashboard):** Admin va o'qituvchilar uchun statistik ma'lumotlar va boshqaruv vositalari.
+- **Dinamik UI/UX**: **Shadcn UI** va **Tailwind CSS** asosida qurilgan, ko'zga yoqimli va foydalanish uchun qulay interfeys.
+- **Personalizatsiya**: Tungi (Dark) va kunduzgi (Light) rejimlarni qo'llab-quvvatlash.
+- **Kurslar Moduli**: Video darslar, topshiriqlar va resurslarni boshqarish tizimi.
+- **Yuqori Samaradorlik**: **Vite** va **React** texnologiyalari evaziga chaqmoqdek tez ishlash tezligi.
+- **Interaktivlik**: Sahifalarda qor yog'ishi (Snow effect) va silliq o'tish animatsiyalari.
+
+## 🛠 Texnologik Stek (Tech Stack)
+
+Loyiha eng so'nggi va barqaror web texnologiyalari asosida qurilgan:
+
+| Texnologiya | Vazifasi |
+|-------------|----------|
+| **[React 18](https://react.dev/)** | Foydalanuvchi interfeysi (Frontend) |
+| **[TypeScript](https://www.typescriptlang.org/)** | Kuchli tiplashtirilgan dasturlash tili |
+| **[Vite](https://vitejs.dev/)** | Zamonaviy va tezkor yig'uvchi (Bundler) |
+| **[Tailwind CSS](https://tailwindcss.com/)** | Atomar CSS uslublash tizimi |
+| **[Shadcn UI](https://ui.shadcn.com/)** | Yuqori sifatli komponentlar kutubxonasi |
+| **[React Query](https://tanstack.com/query/latest)** | Server holatini boshqarish (State Management) |
+| **[React Router DOM](https://reactrouter.com/)** | SPA (Single Page Application) navigatsiyasi |
+
+## 📦 O'rnatish va Ishga Tushirish
+
+Loyihani lokal muhitda ishga tushirish uchun quyidagi ko'rsatmalarga rioya qiling:
+
+### 1. Repozitoriyni nusxalash (Clone)
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/Xusanbek0039/itclms.uz-uchun.git
+cd itclms.uz-uchun
 ```
 
-### 2. Kutubxonalarni o'rnatish
+### 2. Bog'liqliklarni o'rnatish (Dependencies)
 
-Loyiha `npm` yoki `bun` paket menejerlari yordamida ishlashi mumkin. Agar sizda `bun` o'rnatilgan bo'lsa, undan foydalanish tavsiya etiladi (chunki `bun.lockb` fayli mavjud).
+Loyiha `npm` yoki `bun` orqali boshqariladi. Tavsiya etilgan usul - `bun`.
 
-**Bun yordamida:**
 ```bash
+# Bun orqali (Tavsiya etiladi)
 bun install
-```
 
-**Npm yordamida:**
-```bash
+# Yoki npm orqali
 npm install
 ```
 
-### 3. Loyihani ishga tushirish (Development)
+### 3. Dasturni ishga tushirish (Development mode)
 
 ```bash
 # Bun
@@ -57,37 +76,35 @@ bun dev
 npm run dev
 ```
 
-Buyruqni kiritgandan so'ng, brauzeringizda `http://localhost:8080` (yoki terminalda ko'rsatilgan manzil) orqali loyihani ochishingiz mumkin.
+Dastur ishga tushgach, brauzerda `http://localhost:8080` manziliga o'ting.
 
-### 4. Loyihani qurish (Production)
+### 4. Ishlab chiqarish uchun qurish (Production Build)
 
 ```bash
 bun run build
 ```
 
-## 📂 Loyiha Tuzilishi
+## 📂 Loyiha Arxitekturasi
 
-Loyiha modulli va kengaytiriladigan arxitekturaga asoslangan:
+Kod bazasi "Clean Architecture" tamoyillariga imkon qadar yaqinlashtirilgan holda tuzilgan:
 
-- `src/components`: Qayta ishlatiladigan UI komponentlar (Shadcn va maxsus).
-- `src/pages`: Ilovaning asosiy sahifalari va yo'nalishlari.
-- `src/hooks`: Maxsus React hooklari.
-- `src/services`: API bilan ishlash va ma'lumotlarni boshqarish.
-- `src/lib`: Konfiguratsiya va yordamchi kutubxonalar.
-- `src/types`: TypeScript interfeyslari va turlari.
+```bash
+src/
+├── components/     # Qayta ishlatiladigan UI komponentlar (Buttons, Inputs, etc.)
+├── pages/          # Asosiy sahifalar (Home, Courses, Dashboard)
+├── hooks/          # Maxsus React hooklari (Logic reuse)
+├── services/       # API so'rovlari va tashqi xizmatlar bilan ishlash
+├── lib/            # Yordamchi funksiyalar va konfiguratsiyalar (Utils)
+├── types/          # TypeScript interfeyslari va turlari
+└── App.tsx         # Ilovaning kirish nuqtasi
+```
 
-## 📜 Buyruqlar (Scripts)
+## 📜 Litsenziya va Huquqlar
 
-`package.json` faylida quyidagi buyruqlar mavjud:
-
-- `dev`: Loyihani ishlab chiqish rejimida ishga tushirish.
-- `build`: Loyihani ishlab chiqarish (production) uchun qurish.
-- `preview`: Qurilgan loyihani (build qilingan versiyasini) ko'rish.
-- `lint`: Kodni xatolar va stilistik qoidalarga tekshirish.
-
-## 🤝 Hissa qo'shish
-
-Agar siz loyihaga o'z hissangizni qo'shmoqchi bo'lsangiz, bemalol "Pull Request" yuborishingiz yoki xatolar haqida "Issue" ochishingiz mumkin.
+Ushbu loyiha mualliflik huquqi asosida himoyalangan. Koddan ruxsatsiz nusxa ko'chirish yoki tijoriy maqsadlarda foydalanish taqiqlanadi.
 
 ---
-© 2024 ITCLMS. Barcha huquqlar himoyalangan.
+<div align="center">
+  <p>Created by <a href="https://husanbek-coder.uz" target="_blank">Husan Suyunov</a> for <b>IT Park Zomin</b></p>
+  <p>© 2024 ITCLMS. All rights reserved.</p>
+</div>
