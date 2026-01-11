@@ -311,3 +311,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+
+.snowflake {
+  position: fixed;
+  top: -20px;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}

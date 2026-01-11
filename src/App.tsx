@@ -4,6 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
+
+import Snow from "@/components/Snow";
+
 import Index from "./pages/Index";
 import AllCourses from "./pages/AllCourses";
 import NotFound from "./pages/NotFound";
@@ -16,6 +19,10 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+
+        {/* ❄️ Snow Effect */}
+        <Snow />
+
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
